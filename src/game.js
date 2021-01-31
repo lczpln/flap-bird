@@ -52,7 +52,6 @@ function drawText(ctx, text, size, align, posx, posy) {
   ctx.fill();
 }
 
-
 function drawPipe(ctx, posx, posy, w, y) {
   var pipeColor = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
   pipeColor.addColorStop(0, "#03c04a");
@@ -133,14 +132,14 @@ function start() {
 
     applyBirdGravity();
 
-    drawBirdNewPosition()
+    drawBirdNewPosition();
 
     applyPipeMovement();
 
     createNewPipe();
 
     drawPipe(ctx, pipeX, 0, pipeWidth, topPipeBottomY); // draw top pipe
-    drawPipe(ctx, pipeX, topPipeBottomY + pipeGap, pipeWidth, canvasHeight); // drawn bottom pipe
+    drawPipe(ctx, pipeX, topPipeBottomY + pipeGap, pipeWidth, canvasHeight); // draw bottom pipe
 
     drawText(ctx, `score: ${score}`, 12, "right", canvasWidth - 5, 15) // draw score 
     drawText(ctx, `best score: ${bestScore}`, 12, "right", canvasWidth - 5, 30) // draw best score 
